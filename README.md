@@ -58,8 +58,8 @@ kubectl get events --sort-by='{.lastTimestamp}' --namespace=default --watch
 ```
 
 ### Goto the followsing services in the portal
-Cloud Build History
-Container Registry
-Cloud Source Repositories
+* Cloud Build History
+* Container Registry
+* Cloud Source Repositories
 
 *https://github.com/GoogleCloudPlatform/cloud-builders-community/blob/master/kubectl_wait_for_job/README.md
