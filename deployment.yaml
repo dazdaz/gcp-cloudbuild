@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: exapp
+  name: exapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: exapp
+  template:
+    metadata:
+      labels:
+        run: exapp
+    spec:
+      containers:
+      - image: gcr.io/<yourproject>/exapp:latest
+        name: exapp
+        ports:
+        - containerPort: 8000
