@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: exapp
+spec:
+  selector:
+     run: exapp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
+  type: LoadBalancer
