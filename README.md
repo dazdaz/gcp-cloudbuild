@@ -43,7 +43,7 @@ git commit "files"
 git push origin master
 
 # Create the cloud build trigger
-gcloud beta builds triggers import --source=trigger.yaml--verbosity debug
+gcloud beta builds triggers import --source=trigger.yaml --verbosity debug
 gcloud beta builds triggers list
 ```
 
