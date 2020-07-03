@@ -12,13 +12,13 @@ gcloud projects add-iam-policy-binding $PROJECT \
     --role=roles/container.developer
 ```
 
-# Example 1 - Manually submit a cloudbuild job
+# Example 1 - Manually submit a Cloud Build job
 ```
 gcloud builds submit --config=cloudbuild.yaml
 kubectl logs -lrun=exapp -f
 ```
 
-# Example 2 - Setup CICD - Create a repo, and setup a cloudbuild trigger
+# Example 2 - Setup CICD - Create a repo, and setup a Cloud Build trigger
 ```
 ssh-keygen -t rsa -b 4096 -C "source repo build <email>" -f ~/.ssh/sourcerepobuild -P ''
 cat ~/.ssh/myrepokey.pub
