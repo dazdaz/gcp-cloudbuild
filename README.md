@@ -57,7 +57,7 @@ watch -t -n2 kubectl logs -lrun=exapp
 kubectl get events --sort-by='{.lastTimestamp}' --namespace=default --watch
 ```
 
-### Goto the followsing services in the portal
+### Goto the following services in the portal
 * Cloud Build History
 * Container Registry
 * Cloud Source Repositories
