@@ -18,7 +18,7 @@ gcloud builds submit --config=cloudbuild.yaml
 kubectl logs -lrun=exapp -f
 ```
 
-# Example 2 - now create a repo, and setup a cloudbuild trigger
+# Example 2 - Setup CICD - Create a repo, and setup a cloudbuild trigger
 ```
 ssh-keygen -t rsa -b 4096 -C "source repo build <email>" -f ~/.ssh/sourcerepobuild -P ''
 cat ~/.ssh/myrepokey.pub
