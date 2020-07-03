@@ -20,7 +20,7 @@ kubectl logs -lrun=exapp -f
 
 # Example 2 - Setup CICD - Create a repo, and setup a Cloud Build trigger
 ```
-ssh-keygen -t rsa -b 4096 -C "source repo build <email>" -f ~/.ssh/sourcerepobuild -P ''
+ssh-keygen -t rsa -b 4096 -C "source repo build <email>" -f ~/.ssh/myrepokey -P ''
 cat ~/.ssh/myrepokey.pub
 ```
 ### Upload key to
