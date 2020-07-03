@@ -48,6 +48,7 @@ gcloud beta builds triggers list
 ```
 
 ### Trigger a cloudbuild run
+```
 edit main.go
 git add main.go
 git commit main.go -m "update 1"
