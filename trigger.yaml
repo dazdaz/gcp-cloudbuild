@@ -1,0 +1,8 @@
+filename: cloudbuild.yaml
+ignoredFiles:
+- .gitignore
+name: mytrig
+triggerTemplate:
+  branchName: ^master$
+  projectId: <yourproject>
+  repoName: <yourreponame>
