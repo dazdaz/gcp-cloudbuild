@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/<project>/<appname>:$COMMIT_SHA', '.']
+  timeout: 500s
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/<project>/<appname>:$COMMIT_SHA']
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['set', 'image', 'deployment/<appname>', '<appname>=gcr.io/<project>/<appname>:$COMMIT_SHA']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=europe-west4-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=<GKEcluster>'
