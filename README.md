@@ -47,9 +47,9 @@ gcloud beta builds triggers import --source=trigger.yaml --verbosity debug
 gcloud beta builds triggers list
 ```
 
-### Trigger a cloudbuild run
+### Trigger a cloudbuild run by editing some code and commiting those changes back to the repo
 ```
-edit main.go
+vim main.go
 git add main.go
 git commit main.go -m "update 1"
 git push origin master
