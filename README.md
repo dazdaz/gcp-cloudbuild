@@ -2,7 +2,7 @@ To use this builder, your builder service account will need IAM permissions suff
 
 Running the following command will give Cloud Build Service Account container.developer role access to your Container Engine clusters:
 
-# Prep work
+### Prep work
 ```
 PROJECT="$(gcloud projects describe \
     $(gcloud config get-value core/project -q) --format='get(projectNumber)')"
@@ -12,13 +12,13 @@ gcloud projects add-iam-policy-binding $PROJECT \
     --role=roles/container.developer
 ```
 
-# Example 1 - Manually submit a Cloud Build job
+### Example 1 - Manually submit a Cloud Build job
 ```
 gcloud builds submit --config=cloudbuild.yaml
 kubectl logs -lrun=exapp -f
 ```
 
-# Example 2 - Setup CICD - Create a repo, and setup a Cloud Build trigger
+### Example 2 - Setup CICD - Create a repo, and setup a Cloud Build trigger
 ```
 ssh-keygen -t rsa -b 4096 -C "source repo build <email>" -f ~/.ssh/myrepokey -P ''
 cat ~/.ssh/myrepokey.pub
