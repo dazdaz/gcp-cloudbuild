@@ -62,4 +62,4 @@ kubectl get events --sort-by='{.lastTimestamp}' --namespace=default --watch
 * Container Registry
 * Cloud Source Repositories
 
-*https://github.com/GoogleCloudPlatform/cloud-builders-community/blob/master/kubectl_wait_for_job/README.md
+https://github.com/GoogleCloudPlatform/cloud-builders-community/blob/master/kubectl_wait_for_job/README.md
