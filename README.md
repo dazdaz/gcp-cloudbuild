@@ -26,7 +26,10 @@ cat ~/.ssh/myrepokey.pub
 ### Upload key to
 https://source.cloud.google.com/user/ssh_keys
 
-### Create GCP source repo, configure authentication over SSH and push config files+code to the repo
+### Setup Cloud Build
+*Create GCP source repo
+*Configure authentication over SSH 
+*push config files+code to the repo
 ```
 gcloud source repos create mycode-repo
 gcloud source repos describe mycode-repo
@@ -47,7 +50,9 @@ gcloud beta builds triggers import --source=trigger.yaml --verbosity debug
 gcloud beta builds triggers list
 ```
 
-### Trigger a cloudbuild run by editing some code and commiting those changes back to the repo
+### Trigger a cloudbuild run
+*editing some code
+*commiting those changes back to the repo
 ```
 vim main.go
 git add main.go
