@@ -27,9 +27,9 @@ cat ~/.ssh/myrepokey.pub
 https://source.cloud.google.com/user/ssh_keys
 
 ### Setup Cloud Build
-*Create GCP source repo
-*Configure authentication over SSH 
-*push config files+code to the repo
+ * Create GCP source repo
+ * Configure authentication over SSH 
+ * push config files+code to the repo
 ```
 gcloud source repos create mycode-repo
 gcloud source repos describe mycode-repo
@@ -66,8 +66,8 @@ kubectl get events --sort-by='{.lastTimestamp}' --namespace=default --watch
 ```
 
 ### Goto the following services in the portal
-* Cloud Build History
-* Container Registry
-* Cloud Source Repositories
+ * Cloud Build History
+ * Container Registry
+ * Cloud Source Repositories
 
 https://github.com/GoogleCloudPlatform/cloud-builders-community/blob/master/kubectl_wait_for_job/README.md
