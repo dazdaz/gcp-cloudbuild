@@ -54,8 +54,8 @@ gcloud beta builds triggers list
 ```
 
 ### Trigger an automated Cloud Build run
-*editing some code
-*commiting those changes back to the repo
+ * Edit some code
+ * Commit those changes back to the repo
 ```
 vim main.go
 git add main.go
