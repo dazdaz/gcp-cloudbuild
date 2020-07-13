@@ -44,13 +44,16 @@ git remote add origin ssh://source.developers.google.com:2022/p/<project>/r/<you
 git add main.go Dockerfile cloudbuild.yaml
 git commit "files"
 git push origin master
+```
 
+### Trigger a manual cloudbuild run
+```
 # Create the cloud build trigger
 gcloud beta builds triggers import --source=trigger.yaml --verbosity debug
 gcloud beta builds triggers list
 ```
 
-### Trigger a cloudbuild run
+### Trigger an automated cloudbuild run
 *editing some code
 *commiting those changes back to the repo
 ```
