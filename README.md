@@ -4,6 +4,8 @@ Running the following command will give Cloud Build Service Account container.de
 
 ### Prep work
 ```
+gcloud services enable cloudbuild.googleapis.com
+
 PROJECT="$(gcloud projects describe \
     $(gcloud config get-value core/project -q) --format='get(projectNumber)')"
 
