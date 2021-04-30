@@ -10,6 +10,8 @@ gcloud services enable containerregistry.googleapis.com
 
 gcloud services enable cloudbuild.googleapis.com
 
+gcloud container clusters get-credentials --zone=europe-west4-a <cluster>
+
 PROJECT="$(gcloud projects describe \
     $(gcloud config get-value core/project -q) --format='get(projectNumber)')"
 
@@ -20,6 +22,8 @@ gcloud projects add-iam-policy-binding $PROJECT \
 
 ### Example 1 - Manually submit a Cloud Build job
 ```
+# Need to deploy pod once
+kubectl apply -f deployment.yaml
 gcloud builds submit --config=cloudbuild.yaml
 kubectl logs -lrun=exapp -f
 ```
