@@ -4,6 +4,8 @@ Running the following command will give Cloud Build Service Account container.de
 
 ### Prep work
 ```
+gcloud config set project <my-project>
+
 gcloud services enable containerregistry.googleapis.com
 
 gcloud services enable cloudbuild.googleapis.com
