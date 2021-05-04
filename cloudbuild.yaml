@@ -1,11 +1,14 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/<project>/<appname>:$COMMIT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/daev-mygke/exapp', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/<project>/<appname>:$COMMIT_SHA']
-- name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set', 'image', 'deployment/<appname>', '<appname>=gcr.io/<project>/<appname>:$COMMIT_SHA']
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=europe-west4-a'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=<GKEcluster>'
+  args: ['push', 'gcr.io/daev-mygke/exapp']
+# deploy container image to GKE
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=deployment.yaml
+  - --image=gcr.io/<project>/<myrepo>:latest
+  - --location=europe-west4-a
+  - --cluster=>clustername>
